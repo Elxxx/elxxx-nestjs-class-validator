@@ -5,7 +5,7 @@
     "access": "public"
   },
   "description": "Integración de NestJS para class-validator con soporte i18n utilizando encabezados Accept-Language y archivos de locales personalizables.",
-  "author": "Elias Almarza",
+  "author": "Elxxx",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
@@ -105,10 +105,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khoativi/nestjs-class-validator-i18n.git"
+    "url": "git+https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0.git"
   },
   "bugs": {
-    "url": "https://github.com/khoativi/nestjs-class-validator-i18n/issues"
+    "url": "https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0/issues"
   },
-  "homepage": "https://github.com/khoativi/nestjs-class-validator-i18n#readme"
+  "homepage": "https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0#readme"
 }
