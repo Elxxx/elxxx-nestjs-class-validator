@@ -1,5 +1,5 @@
 {
-  "name": "@elxxx/nestjs-class-validator-i18n",
+  "name": "@elxxx/nestjs-class-validator",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -30,7 +30,6 @@
   ],
   "scripts": {
     "build": "rm -rf dist && nest build && cp -r src/messages dist/messages",
-    "build-cross-windows": "if (Test-Path dist) { Remove-Item -Recurse -Force dist }; nest build; Copy-Item -Recurse -Force src/messages dist/messages",
     "prepublishOnly": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:dev": "nodemon test/main.ts",
@@ -103,7 +102,7 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
+      },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0.git"
