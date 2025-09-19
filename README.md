@@ -1,4 +1,4 @@
-# @khoativi/nestjs-class-validator-i18n
+# @elxxx/nestjs-class-validator-i18n
 
 **@elxxx/nestjs-class-validator-i18n** @elxxx/nestjs-class-validator-i18n es una extensión ligera para NestJS que provee mensajes de error localizados para class-validator sin necesidad de personalizar cada decorador.
 Permite manejar errores de validación en múltiples idiomas mediante archivos JSON estándar e integra directamente con ValidationPipe y ExceptionFilter.
