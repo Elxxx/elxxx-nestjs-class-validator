@@ -30,6 +30,7 @@
   ],
   "scripts": {
     "build": "rm -rf dist && nest build && cp -r src/messages dist/messages",
+    "build-cross-windows": "if (Test-Path dist) { Remove-Item -Recurse -Force dist }; nest build; Copy-Item -Recurse -Force src/messages dist/messages",
     "prepublishOnly": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:dev": "nodemon test/main.ts",
