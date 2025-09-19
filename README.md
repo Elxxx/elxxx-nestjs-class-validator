@@ -1,47 +1,48 @@
 # @khoativi/nestjs-class-validator-i18n
 
-**@khoativi/nestjs-class-validator-i18n** is a lightweight NestJS extension to provide localized error messages for `class-validator` without needing to customize each decorator. It supports multi-language validation errors via standard JSON files and integrates with `ValidationPipe` and `ExceptionFilter`.
+**@elxxx/nestjs-class-validator-i18n** @elxxx/nestjs-class-validator-i18n es una extensión ligera para NestJS que provee mensajes de error localizados para class-validator sin necesidad de personalizar cada decorador.
+Permite manejar errores de validación en múltiples idiomas mediante archivos JSON estándar e integra directamente con ValidationPipe y ExceptionFilter.
 
-## ✨ Key Features
+## ✨ Características principales
 
-- 🌍 Supports multiple languages (e.g., `en`, `vi`)
-- 📥 Reads `Accept-Language` header to determine language dynamically
-- 📦 Plug-and-play integration with NestJS's `ValidationPipe`
-- 🧩 Customizable message files for each locale
-- ⚡ Zero config needed per-decorator
+- 🌍 Soporta múltiples idiomas (ej: en, es)
+- 📥 Lee la cabecera Accept-Language para determinar el idioma dinámicamente
+- 📦 Integración lista para usar con el ValidationPipe de NestJS
+- 🧩 Archivos de mensajes personalizables para cada locale
+- ⚡ Cero configuración necesaria en cada decorador
 
-## 📦 Installation
+## 📦 Instalación
 
 **npm:**
 
 ```bash
-npm install @khoativi/nestjs-class-validator-i18n
+npm @elxxx/nestjs-class-validator-i18n
 ```
 
 **yarn:**
 
 ```bash
-yarn add @khoativi/nestjs-class-validator-i18n
+yarn add @elxxx/nestjs-class-validator-i18n
 ```
 
 **pnpm:**
 
 ```bash
-pnpm add @khoativi/nestjs-class-validator-i18n
+pnpm add @elxxx/nestjs-class-validator-i18n
 ```
 
-## 🚀 Usage
+## 🚀 Uso
 
-### 1. Register Global Pipes and Filter
+### 1. Registrar Pipes y Filtros globales
 
-Use the provided exception and filter classes to apply localized validation globally.
+Utiliza las clases de excepción y filtro provistas para aplicar validación localizada en toda la aplicación.
 
 ```ts
 // main.ts
 import {
   I18nValidationException,
   I18nValidationFilter,
-} from '@khoativi/nestjs-class-validator-i18n';
+} from '@elxxx/nestjs-class-validator-i18n';
 import { ValidationPipe } from '@nestjs/common';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -69,7 +70,7 @@ async function bootstrap() {
 bootstrap();
 ```
 
-### 2. Create DTO with class-validator
+### 2. Crear DTO con class-validator
 
 ```ts
 import { IsEmail, IsNotEmpty } from 'class-validator';
@@ -83,7 +84,7 @@ export class CreateUserDto {
 }
 ```
 
-### 3. Send a request with `Accept-Language` header
+### 3. Enviar una petición con cabecera `Accept-Language`
 
 ```http
 POST /users
@@ -95,7 +96,7 @@ Content-Type: application/json
 }
 ```
 
-Response:
+Respuesta:
 
 ```json
 {
@@ -105,10 +106,10 @@ Response:
 }
 ```
 
-## 🛠️ Issues and Contributing
+## 🛠️ Issues y Contribuciones
 
-Feel free to open [issues](https://github.com/khoativi/nestjs-class-validator-i18n/issues) or submit pull requests for improvements, bug fixes, or additional language support.
+Siéntete libre de abrir [issues](https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0/issues) o enviar pull requests para mejoras, correcciones de errores o soporte de nuevos idiomas.
 
 ## 📄 License
 
-MIT License © [Khoa Trần](https://github.com/khoativi)
+Licencia MIT © [elxxx](https://github.com/Elxxx)
