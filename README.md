@@ -5,7 +5,7 @@ Permite manejar errores de validación en múltiples idiomas mediante archivos J
 
 ## ✨ Características principales
 
-- 🌍 Soporta múltiples idiomas (en , vi, fr , cn, hi, es)
+- 🌍 Soporta múltiples idiomas (en , vi, fr, cn, hi, es)
 - 📥 Lee la cabecera Accept-Language para determinar el idioma dinámicamente
 - 📦 Integración lista para usar con el ValidationPipe de NestJS
 - 🧩 Archivos de mensajes personalizables para cada locale
@@ -73,26 +73,32 @@ bootstrap();
 ### 2. Crear DTO con class-validator
 
 ```ts
-import { IsEmail, IsNotEmpty } from 'class-validator';
+import { IsEmail, IsNotEmpty, MinLength, IsStrongPassword } from 'class-validator';
 
-export class CreateUserDto {
+export class RegisterUserDto {
   @IsEmail()
   email: string;
 
   @IsNotEmpty()
-  name: string;
+  username: string;
+
+  @MinLength(8)
+  @IsStrongPassword()
+  password: string;
 }
 ```
 
 ### 3. Enviar una petición con cabecera `Accept-Language`
 
 ```http
-POST /users
-Accept-Language: vi
+POST /register
+Accept-Language: es
 Content-Type: application/json
 
 {
-  "email": "not-an-email"
+  "email": "usuario@example.com",
+  "username": "elias",
+  "password": "123"
 }
 ```
 
@@ -101,7 +107,10 @@ Respuesta:
 ```json
 {
   "statusCode": 400,
-  "message": "email phải là email hợp lệ",
+  "message": [
+    "El campo password debe tener al menos 8 caracteres",
+    "El campo password debe ser una contraseña segura"
+  ],
   "error": "Bad Request"
 }
 ```
