@@ -1,6 +1,6 @@
 {
   "name": "@elxxx/nestjs-class-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -105,10 +105,10 @@
       },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0.git"
+    "url": "git+https://github.com/Elxxx/elxxx-nestjs-class-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0/issues"
+    "url": "https://github.com/Elxxx/elxxx-nestjs-class-validator/issues"
   },
-  "homepage": "https://github.com/Elxxx/elxxx-nestjs-class-validator-i18n-1.0.0#readme"
+  "homepage": "https://github.com/Elxxx/elxxx-nestjs-class-validator#readme"
 }

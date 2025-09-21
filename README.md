@@ -5,7 +5,7 @@ Permite manejar errores de validación en múltiples idiomas mediante archivos J
 
 ## ✨ Características principales
 
-- 🌍 Soporta múltiples idiomas (en, vi, es)
+- 🌍 Soporta múltiples idiomas (en , vi, fr , cn, hi, es)
 - 📥 Lee la cabecera Accept-Language para determinar el idioma dinámicamente
 - 📦 Integración lista para usar con el ValidationPipe de NestJS
 - 🧩 Archivos de mensajes personalizables para cada locale
