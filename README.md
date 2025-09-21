@@ -1,11 +1,11 @@
-# @elxxx/nestjs-class-validator-i18n
+# @elxxx/nestjs-class-validator
 
-**@elxxx/nestjs-class-validator-i18n** @elxxx/nestjs-class-validator-i18n es una extensión ligera para NestJS que provee mensajes de error localizados para class-validator sin necesidad de personalizar cada decorador.
+**@elxxx/nestjs-class-validator** @elxxx/nestjs-class-validator es una extensión ligera para NestJS que provee mensajes de error localizados para class-validator sin necesidad de personalizar cada decorador.
 Permite manejar errores de validación en múltiples idiomas mediante archivos JSON estándar e integra directamente con ValidationPipe y ExceptionFilter.
 
 ## ✨ Características principales
 
-- 🌍 Soporta múltiples idiomas (ej: en, es)
+- 🌍 Soporta múltiples idiomas (en, vi, es)
 - 📥 Lee la cabecera Accept-Language para determinar el idioma dinámicamente
 - 📦 Integración lista para usar con el ValidationPipe de NestJS
 - 🧩 Archivos de mensajes personalizables para cada locale
@@ -16,19 +16,19 @@ Permite manejar errores de validación en múltiples idiomas mediante archivos J
 **npm:**
 
 ```bash
-npm @elxxx/nestjs-class-validator-i18n
+npm @elxxx/nestjs-class-validator
 ```
 
 **yarn:**
 
 ```bash
-yarn add @elxxx/nestjs-class-validator-i18n
+yarn add @elxxx/nestjs-class-validator
 ```
 
 **pnpm:**
 
 ```bash
-pnpm add @elxxx/nestjs-class-validator-i18n
+pnpm add @elxxx/nestjs-class-validator
 ```
 
 ## 🚀 Uso
@@ -42,7 +42,7 @@ Utiliza las clases de excepción y filtro provistas para aplicar validación loc
 import {
   I18nValidationException,
   I18nValidationFilter,
-} from '@elxxx/nestjs-class-validator-i18n';
+} from '@elxxx/nestjs-class-validator';
 import { ValidationPipe } from '@nestjs/common';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -61,7 +61,7 @@ async function bootstrap() {
 
   const adapterHost = app.get(HttpAdapterHost);
   app.useGlobalFilters(
-    new I18nValidationFilter(adapterHost, { fallbackLanguage: 'vi' }),
+    new I18nValidationFilter(adapterHost, { fallbackLanguage: 'es' }),
   );
 
   await app.listen(3000);
